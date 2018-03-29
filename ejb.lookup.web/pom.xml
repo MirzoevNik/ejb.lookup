@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>ejb.lookup</artifactId>
+        <groupId>com.mirzoevnik</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../ejb.lookup</relativePath>
+    </parent>
+
+    <artifactId>ejb.lookup.web</artifactId>
+    <name>${project.artifactId}</name>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mirzoevnik</groupId>
+            <artifactId>ejb.lookup.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mirzoevnik</groupId>
+            <artifactId>ejb.lookup.ejb</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-servlet_2.5_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
